@@ -1,11 +1,11 @@
-# Week 13 — Validating Ontology-Enabled Applications and Constructing Semantic Pipelines
+# Week 13 — Iterative OWL Reasoning and LLM Abduction
 
 **Dates:** Nov. 16–22, 2026  
 **Lecture Set:** 4 — https://www.youtube.com/watch?v=SR0qAvjkgHI
 
 ## Focus
 
-Validation criteria for ontology-enabled workflows; abductive hypotheses, SHACL-style constraint checking, and deductive entailment.
+Validation of ontology-enabled workflows; incremental formalization of evidence; logical possibility, abductive hypothesis, and deductive entailment; and comparison of OWL DL reasoning with LLM-based reasoning under incomplete evidence.
 
 ## Watch
 

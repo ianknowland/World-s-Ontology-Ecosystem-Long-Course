@@ -16,7 +16,7 @@
 | 12 | Nov. 9–15 | Ontology-Driven Agents and the Promise of Agentic Workflows — Jeremy Ravenel | 4 | — |
 | 13 | Nov. 16–22 | Validating Ontology-Enabled Applications and Constructing Semantic Pipelines — Rodriguez, Ravenel | 4 | **Project 4; Debate Reflection 4** |
 | 14 | Nov. 23–29 | The Future of Ontology Engineering: Competing Visions, Debate, and Synthesis — Smith, Beverley | 5 | **Peer Review 4** |
-| 15 | Nov. 30–Dec. 6 | Capstone Synthesis | 5 | **Project 5; Debate Reflection 5** |
+| 15 | Nov. 30–Dec. 7 | Capstone Synthesis | 5 | **Project 5; Debate Reflection 5** |
 
 ## Lecture URLs
 

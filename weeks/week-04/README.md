@@ -13,7 +13,7 @@ Watch the segment of Lecture Set 1 corresponding to **Ontology Tradecraft and th
 
 ## Work This Week
 
-Review a Project 1 pull request. Complete Debate Reflection 1. Review the optional patrol-boat OWL practice material linked from the resources page.
+Review a Project 1 pull request. Complete Debate Reflection 1. 
 
 ## Due
 

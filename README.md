@@ -45,8 +45,6 @@ See [`course/grading.md`](course/grading.md) for the working rubrics.
 4. [Lecture Set 4 — Ontology Engineering in a Contemporary AI Workflow](https://www.youtube.com/watch?v=SR0qAvjkgHI)
 5. [Lecture Set 5 — The Future of Ontology Engineering](https://www.youtube.com/watch?v=sZtLctB6UBk)
 
-The weekly modules identify the topic and speaker to locate within each extended recording. Add direct timestamps to [`course/video-index.md`](course/video-index.md) as they are finalized.
-
 ## Repository Layout
 
 ```text
@@ -54,17 +52,15 @@ The weekly modules identify the topic and speaker to locate within each extended
 ├── README.md
 ├── SETUP.md
 ├── SYLLABUS.md
-├── CREATE_REPO.md
 ├── course/
 ├── weeks/
 ├── projects/
 ├── participation/
 ├── resources/
-├── submissions/
-└── .github/
+└── submissions/
 ```
 
 ## Course Discussions
 
-GitHub Discussions is used for the five required debate reflections and for course questions. The instructor should create the five graded reflection threads using the ready-to-paste prompts in [`participation/debate-reflections/`](participation/debate-reflections/).
+GitHub Discussions is used for the five required debate reflections and for course questions.
 

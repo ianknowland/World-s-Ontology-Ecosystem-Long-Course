@@ -35,8 +35,8 @@ Install:
 Clone your fork:
 
 ```bash
-git clone https://github.com/YOUR-USERNAME/COURSE-REPOSITORY.git
-cd COURSE-REPOSITORY
+git clone https://github.com/YOUR-USERNAME/World-s-Ontology-Ecosystem-Long-Course.git
+cd World-s-Ontology-Ecosystem-Long-Course
 ```
 
 ## 4. Add the course repository as `upstream`
@@ -44,11 +44,9 @@ cd COURSE-REPOSITORY
 From your local clone:
 
 ```bash
-git remote add upstream https://github.com/COURSE-ORG/COURSE-REPOSITORY.git
+git remote add upstream https://github.com/Applied-Ontology-Education/World-s-Ontology-Ecosystem-Long-Course.git
 git remote -v
 ```
-
-Replace the placeholder URL with the instructor-provided repository URL.
 
 ## 5. Create a clean branch for **each** project
 

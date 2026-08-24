@@ -1,6 +1,6 @@
 # Week 15 — Capstone Synthesis
 
-**Dates:** Nov. 30–Dec. 6, 2026  
+**Dates:** Nov. 30–Dec. 7, 2026  
 **Lecture Set:** 5 — https://www.youtube.com/watch?v=sZtLctB6UBk
 
 ## Focus
