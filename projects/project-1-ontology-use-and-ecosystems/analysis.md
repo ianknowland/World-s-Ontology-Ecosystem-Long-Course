@@ -17,40 +17,45 @@ An ontology could provide a structured and queryable representation of knowledge
 2. Short answer: Wikis exist! It's possible to have a knowledge base that makes it easy to link information to other pieces of information, with a change log and provenance. You might be thinking, "Didn't you call out SharePoint as an issue when it's essentially a wiki?" The issue is when a tool that would serve the purpose is not utilized to greatest effect. It would be a manual effort to populate a wiki, but so is populating a knowledge graph and, arguably, a wiki is much faster on that front. They're often cheap and simple to implement, and a lot of successful companies in a variety of industries use internal wikis to organize their knowledge bases to great effect. Why engineer an ontology solution with all of the cost and effort that entails when you can do something like this?
 
 ## Scope
-The scope of a health insurance information ontology would be informational entities like internal rules/procedures/guidelines and how they relate to policy information (e.g. coverage/benefits/plans/claims), customer data, and provider data, while supporting queries over content changes to document versions.
+The scope of a health insurance information ontology would be informational entities like policy information (e.g. coverage/benefits/plans/claims), internal rules/procedures/guidelines, and how they relate to one another as well as to customer and provider data, while supporting queries over content changes to document versions.
 
 ## Competency Questions
 
 1. What internal guide describes claims of type X?
 2. When did section X of document Y begin to reference plan Z?
+3. Is the definition of term X in document Y at t1 the same as the authoritative definition of term X in document Z at t1?
+4. When and by whom was resource X determined to be authoritative?
+5. Which documents diverge from their related authoritative sources?
 
 ## Ecosystem Scan
 
 ### Effort 1
 **"An ontology for healthcare systems" (Goyer, et al., 2022)**
 - This ontology extends Basic Formal Ontology, Information Artifact Ontology, and Ontology for Biomedical Investigations to represent the environment of Learning Health Systems which, according to this paper, document clinical data, derive knowledge from it, and modify patient care practices in light of the new knowledge.
-- In terms of domain coverage, it largely supports provider elements of the HII scope above, such as healthcare facilities, the kinds of procedures that take place in them, the roles of those performing procedures, and relations that pick out the target of those procedures.
+- In terms of domain coverage, it largely supports provider elements of the health insurance information scope above, such as healthcare facilities, the kinds of procedures that take place in them, the roles of those performing procedures, and relations that pick out the target of those procedures.
 - In my mind, this would be a case of alignment or selective reuse, as there are some design decisions I might make differently but could potentially be mappable to entities here. An example is the class *populational healthcare service delivery*, which "aims at the health of a group of organisms but selects this group by specifying a common trait among them, thus characterizing a population." Now, this is a narrative description of the term rather than an Aristotelian one like others within the paper. But even so, there's an odd set of semantics in which an instance of this process is intended to have as target an object aggregate (a population) that meets specific criteria that are not spelled out here. One can imagine a combinatorial explosion of subclasses between the kinds of populational healthcare service deliveries and the kinds of populations defined by a particular trait and (according to the paper) particular location, such as the Smoking Population of Chicago; or in the specifications that prescribe the individuals that would be parts of such a number of aggregates. Perhaps the solution is more elegant than it seems to me, but I'm having trouble seeing it if so. Other than that, there are several terms I could reuse as targets/performers of procedures that claims are about.
-- I would probably look for other ontologies in this domain that extend CCO, given that I'm fairly familiar with its use at this point, and looking at how they would interact with this module.
+- I would probably look for other ontologies in this domain that extend CCO, given that I'm fairly familiar with its use at this point, and would see how they would interact with this module.
 
 ### Effort 2
 **"Towards a Cyber Information Ontology" (Limbaugh, Jensen, & Beverley)**
 - This general vocabulary and proposed taxonomy aims at informing ontologies that extend, among others, the Information Entities Ontology and provide a reliable model for dealing with copies of and changes to information in a cyber information management domain.
-- Digital knowledge bases in a hybrid-work health insurance setting are part of the cyber information management domain.
+- Digital knowledge bases in a hybrid-work health insurance setting are part of the cyber information management domain, and rely on faithful representations of policy at any given time to mitigate legal liability. TACIO directly supports this aim at a high level.
 - Given that the stated scope of the TACIO effort is that it contains terms "too general and too few to comprise an ontology of their own", I think a robust extension that extends ontologies that contain these elements is the way to go.
 - I would research ontologies that extend CCO in any related domains to see if this effort has already encouraged adoption of its content. The new Cyber Ontology Foundry is probably a good start, and watching that space for any contenders, as well as upcoming major version updates on CCOs roadmap.
 
 ### Effort 3
+**HL7 FHIR Specification v5.0.0**
+- The Fast Healthcare Interoperability Resources standard was designed to allow different electronic health record systems to securely exchange medical data. The standard consists of "resources" that are serializable as XML, JSON, or RDF, and covers entities like documents, claims, coverages, healthcare services, and others.
+- The standard is a well-structured resource from which to derive a domain understanding of vocabulary related to important concepts that would need to be tracked in a knowledge base.
+- I would align with this, as it seems to be an important standard but even though it is serializable as RDF, it is not BFO-conformant. It would make more sense to use it as a source for definitions in a BFO conformant ontology. 
+- Additional investigation would involve examining the standard for resources that support ontologizing a knowledge base about healthcare topics beyond just being a source of information. If a custom RDF-driven knowledge base were implemented through a new kind of software tool, then perhaps elements in the knowledge base could interact more directly with other RDF healthcare solutions outside the knowledge base that employees have to interact with. This standard is aimed at different systems that exchange healthcare data; an internal knowledge base isn't exactly that at present, but it'd be worth examining if it could be through a BFO-conformant solution based on this standard.
 
--
--
--
--
 ## Recommendation
 
-**PROCEED / PROCEED WITH CONDITIONS / DO NOT PROCEED**
+**PROCEED WITH CONDITIONS**
 
 ### Rationale
+At present, I think an ontology-driven solution for a health insurance company's knowledge base is a good idea; however, I think it would require constant maintenance of the graph and that involves humans in the loop who know how to work with it. On top of that, it requires that the cost (i.e. financial/legal/time) of *not* implementing a trustworthy, logically rigorous way of querying and flagging for divergent changes to a governed knowledge base over time is great enough to justify its implementation.
 
 ## AI Use
 
